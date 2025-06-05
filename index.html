@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task-1 | Web Development</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    header {
+      background-color: #3b5998;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 200px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #3b5998;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2d4373;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Task-1 of Web Development using HTML, CSS and JavaScript</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- ApexPlanet Software Logo -->
+    <img src="data:image/png;base64,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" alt="ApexPlanet Software Logo" class="logo" />
+
+    <!-- Short Description -->
+    <p>This is Task-1 of my internship at ApexPlanet Software Private Limited. It involves creating a basic webpage with HTML for structure, CSS for styling, and JavaScript for interaction.</p>
+
+    <!-- Main Description -->
+    <h2>Project Description</h2>
+    <p>The webpage includes a structured layout with a heading, a description, an image, a hyperlink, and a functional button. The purpose is to demonstrate foundational front-end web development skills.</p>
+
+    <!-- Link -->
+    <p>Learn more about the company: 
+      <a href="https://apexplanet.in/" target="_blank">ApexPlanet Software Private Limited</a>
+    </p>
+
+    <!-- JavaScript Button -->
+    <button onclick="showAlert()">Click to Trigger Alert</button>
+  </div>
+
+  <script>
+    function showAlert() {
+      alert("Hello! You've clicked the JavaScript alert button.");
+    }
+  </script>
+
+</body>
+</html>
