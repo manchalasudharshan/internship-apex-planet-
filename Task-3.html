@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 - Advanced Styling & JS</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 20px; }
+    header { background: #0b79d0; color: white; padding: 20px; text-align: center; }
+    main { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+    .sidebar { background-color: #f4f4f4; padding: 15px; }
+    .content { background-color: #e9ecef; padding: 15px; }
+    @media (max-width: 768px) {
+      main { grid-template-columns: 1fr; }
+      header { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Responsive Page</h1></header>
+  <main>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">
+      <h2>Quiz</h2>
+      <p id="question">Capital of France?</p>
+      <button onclick="checkAnswer('a')">a) London</button>
+      <button onclick="checkAnswer('b')">b) Paris</button>
+      <button onclick="checkAnswer('c')">c) Rome</button>
+      <p id="result"></p>
+      <hr>
+      <h2>Joke Generator</h2>
+      <button onclick="getJoke()">Get Joke</button>
+      <p id="joke"></p>
+    </div>
+  </main>
+  <script>
+    function checkAnswer(ans) {
+      const result = document.getElementById('result');
+      result.textContent = ans === 'b' ? 'Correct!' : 'Wrong! Try again.';
+      result.style.color = ans === 'b' ? 'green' : 'red';
+    }
+    async function getJoke() {
+      const res = await fetch('https://official-joke-api.appspot.com/random_joke');
+      const data = await res.json();
+      document.getElementById('joke').textContent = `${data.setup} - ${data.punchline}`;
+    }
+  </script>
+</body>
+</html>
